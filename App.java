@@ -11,24 +11,24 @@ public class App{
         System.out.println(nejvetsi);
 
         //L - Úk. 1
-        int x=  Math.min(Math.abs(a), Math.min(Math.abs(b), Math.abs(c)));
-        System.out.println("Výsledky jsou: Nejblíže nule je "+x+", ");
+        int x=  Math.min(Math.abs(a), Math.min(Math.abs(b), Math.abs(c))); //určí číslo Nejblíže nule
+        System.out.println("Výsledky jsou: Nejblíže nule je "+x+", "); //napíše ho
 
 
         //L - Úk. 2
-        int cisliceA1 = a%10, cisliceA2 = cisliceA1%10;
+        int cisliceA1 = a%10, cisliceA2 = cisliceA1%10; //uloží do proměnných čísla na pozicích desítek a jednotek
         int cisliceB1 = b%10, cisliceB2 = cisliceB1%10;
         int cisliceC1 = c%10, cisliceC2 = cisliceC1%10;
-        if((cisliceA1 != cisliceA2) && (cisliceB1 != cisliceB2) && (cisliceC1 != cisliceC2) System.out.println("");
+        if((cisliceA1 != cisliceA2) && (cisliceB1 != cisliceB2) && (cisliceC1 != cisliceC2) System.out.println(""); //napíše, pokud jsou různé číslice na pozicích deítek a jednotek
 
         //L - Úk. 3
-        int roz1 = a-b; int roz3 = b-a; int roz5 = c-a;
+        int roz1 = a-b; int roz3 = b-a; int roz5 = c-a; //uloží rúzné rozdíly do proměnných
         int roz2 = a-c; int roz4=  b-c; int roz6 = c-b;
-        int nejrozdil = Math.max(roz1, Math.max(roz2, Math.max(roz3, Math.max(roz4, Math.max(roz5, roz6)))));
+        int nejrozdil = Math.max(roz1, Math.max(roz2, Math.max(roz3, Math.max(roz4, Math.max(roz5, roz6))))); //vypíše největší rozdíl
 
         //L - úk.4
-        int nejmensiCisA = a%10, nejmensiCisB = b%10, nejmensiCisC = c%10;
-        if(a%nejmensiCisA == 0|| b%nejmensiCisB == 0||nejmensiCisC == 0) System.out.println("Alespoň jedno číslo je dělitelné svojí poslední číslicí")
+        int nejmensiCisA = a%10, nejmensiCisB = b%10, nejmensiCisC = c%10; //uloží jednotky
+        if(a%nejmensiCisA == 0|| b%nejmensiCisB == 0||nejmensiCisC == 0) System.out.println("Alespoň jedno číslo je dělitelné svojí poslední číslicí");
 
         //Edovo řešení
         if(a%100 != b%100 && a%100 != c%100 && b%100 != c%100 && b%100 != a%100 && c%100 != a%100 && c%100 != b%100);
@@ -43,7 +43,6 @@ public class App{
        }
 
 
-       //do budoucna
        switch((int)Math.signum(a+b+c)){
            case -1: //je záporné
                 break;
@@ -53,6 +52,7 @@ public class App{
                 break;
        }
 
+       //do budoucna
        for(int i=0; i<5; i++){ //opakuje se dokud nenastane podmínka, daná prostředním blokem
            System.out.println(1);
        }
